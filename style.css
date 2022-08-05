@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    gap: 1px;
+    margin-top: 75px;
+    justify-content: center;
+    grid-template-columns: repeat(16, 50px);
+}
+
+.grid {
+    min-width: 30px;
+    min-height: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+
