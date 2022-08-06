@@ -24,7 +24,7 @@ function gridSizeBtn() {
 
     let i = 1;
 
-    while (i != 0) {
+    while (i != 'stop') {
         let msg = prompt('please enter the number of squares per side for the new grid');
 
         if (msg > 100) {
@@ -32,13 +32,20 @@ function gridSizeBtn() {
             continue;
         }
 
-        if (msg <= 100) {
+        if (msg == null) {
+            break;
+        }
+
+        if (msg == 0) {
+            alert('Grid cannot have a value of 0');
+        }
+
+        if (msg > 0 && msg <= 100) {
 
             container.textContent = '';
 
             columns = msg;
             rows = msg;
-
 
             for (let i = 0; i < rows; i++) {
                 for (let x = 0; x < columns; x++) {
